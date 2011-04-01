@@ -1,0 +1,126 @@
+body {
+	height: 100%;
+}
+
+#title {
+	margin: 0px auto;
+	width: 400px;
+	height: 60px;
+	display: block;
+}
+
+.border {
+	border: 1px solid #E5ECF9;
+}
+
+.divCenter {
+	margin: 0px auto;
+	width: 510px;
+	display: block;
+}
+
+.content {
+	width: 540px;
+}
+
+.options {
+	padding: 10px;
+}
+
+.opt {
+	padding: 5px;
+}
+
+.divCenter h1 {
+	margin: 0;
+}
+
+#text_title {
+	margin: 10px 10px;
+	float: left;
+}
+
+#logo {
+	background-image: url("../icon59.png");
+	width: 59px;
+	height: 59px;
+	float: left;
+}
+
+#colorControl {
+	height: 15px;
+}
+
+#colorControl ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#colorControl ul li{
+	float: left;
+}
+
+#colorControl ul li:hover {
+	padding-bottom: 1px;
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	border-color: red;
+}
+
+#blue {
+	background-image: url("../images/colorbar.png");
+	background-position: 0px 0px;
+	background-repeat:no-repeat;
+	height: 15px;
+	width: 15px;
+	margin-right: 5px;
+}
+
+#green {
+	background-image: url("../images/colorbar.png");
+	background-position: -30px 0px;
+	background-repeat:no-repeat;
+	height: 15px;
+	width: 15px;
+	margin-right: 5px;
+}
+
+#yellow {
+	background-image: url("../images/colorbar.png") ;
+	background-position: -45px 0px;
+	background-repeat:no-repeat;
+	height: 15px;
+	width: 15px;
+	margin-right: 5px;
+}
+
+#red {
+	background-image: url("../images/colorbar.png");
+	background-position: -15px 0px;
+	background-repeat:no-repeat;
+	height: 15px;
+	width: 15px;
+	margin-right: 5px;
+}
+
+#black {
+	background-image: url("../images/colorbar.png");
+	background-position: -75px 0px;
+	background-repeat:no-repeat;
+	height: 15px;
+	width: 15px;
+	margin-right: 5px;
+}
+
+#white {
+	background-image: url("../images/colorbar.png");
+	background-position: -60px 0px;
+	background-repeat:no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+input[type=text] {
+	width: 50px;
+}

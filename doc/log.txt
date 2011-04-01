@@ -1,0 +1,29 @@
+This chrome extensions is to help users to navigate their tabs easier by visual thumbnails with cover-flow style, and users can scroll their mouse and use keyboards to navigate tabs, and have option to delete tabs within popup window. There are 6 different nice backgrounds for users to customize and more options in the option page. There is hotkey to open this extensions, which make it more useful.
+
+Latest update log
+1. Fix bugs in displaying thumbnails.
+
+Tips for using this extension:
+1. When you want to scroll faster to view the tabs on the left or right, please move the cursor on the left side or right side to scroll within the popup box.
+2. If you don't like the default size of the popup window, you can go to option page to edit the size you want.
+
+Features of this google extensions:
+1. Visualize the tabs by thumbnails
+2. Navigating the tabs by scrolling your mouse and your keyboard --arrow keys, Spacebar, and Enter-- within popup window
+3. Nice effect of itune cover flow
+4. Customize the background style that you like
+5. Delete the tab within the popup window 
+6. Having more options to customize the display of your tabs! 
+7. Finally, users can use hotkey to open this extension by Ctrl+Q, or Alt+V, or Alt+tab (There is a common issue that the hotkeys cannot be used in some web pages) NEW
+8. Opening recent closed tabs (NEW)
+
+FAQs:
+1. First time install this extensions need to restart the chrome browser so as to use Visual Tabs functionally, and only for the first time user.
+2. If you cannot see the real thumbnails, just refresh the page (Ctrl+R to refresh the extension within the tab).
+3. Please report the bugs if you found.
+4. Report bugs or suggest with screen shot, please email me at: daifu_ye@yahoo.com
+
+
+Credits:
+1. Icons from iconfinder.net
+2. momoflow by momolog in github

@@ -1,0 +1,23 @@
+{
+	"name": "Visual Tabs",
+	"version": "1.7.3",
+	"options_page": "visualTabsOptions.html",
+	"background_page": "background.html",
+	"description": "Visual Tabs For Chrome: If you enjoy the effect of cover-flow style in navigation, this is the choice for your tabs in Chrome",
+	"browser_action": {
+	"default_title": "Tabs Navigation",
+	"default_icon": "icon32.png",
+	"popup": "visualTabsPopup.html"
+	},
+	"permissions": ["tabs"],
+	"icons": {
+	"128": "icon128.png",
+	"48": "icon59.png",
+	"32": "icon32.png",
+	"16": "icon32.png"
+	},
+	"content_scripts": [{
+	"matches": [ "http://*/*", "https://*/*" ],
+	"js": ["lib/jquery.js", "lib/jquery.hotkey.js", "lib/keyboardCtr.js"]
+	}]
+}

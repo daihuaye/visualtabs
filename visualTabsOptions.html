@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Visual Tab Options</title>
+		<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+		<link rel="stylesheet" href="/css/options.css" type="text/css" media="screen">
+		<script type="text/javascript" src="lib/jquery.js"></script>
+		<style type="text/css" media="screen">
+			
+		</style>
+	</head>
+	<body onload="init();">
+		<div class="container">
+			<div class="span-24">
+				<div class="divCenter border content">
+					<div class="box divCenter">
+						<div id="title">
+							<div id="logo"></div>
+							<div id="text_title">
+								<h1>Visual Tabs Options</h1>
+							</div>
+						</div>
+					</div>
+					<div class="span-13 options">
+						<h3>Options:</h3> 
+						<div class="opt"><input type="checkbox" name="reflection" value="1" id="reflection"> Display reflection for the tabs</div>
+						<div class="opt"><input type="checkbox" name="fadeInDistance" value="1" id="fadeInDistance"> Display tabs with fadein effect</div>
+						<div class="opt"><input type="checkbox" name="closeBt" value="1" id="closeBt"> Display close button</div>
+						<div class="opt"><input type="checkbox" name="thumbSize" value="1" id="thumbSize"> Enlarge thumbnails with customized size (Don't display thumbnails as original size).</div>
+						<div class="opt"><input type="checkbox" name="setting" value="1" id="setting"> Don't display setting bar at the bottom</div>
+						<div class="opt">Stroking hotkeps and Visual Tabs will popup in a new
+							<select id="popupOption">
+								<option value="tab">tab</option>
+								<option value="window">window</option>
+							</select>
+						</div>
+						<div class="opt">The size of the window that you want: &nbsp;
+							<label for="width">width:</label>
+							<input type="text" name="width" value="" id="width">px, &nbsp;
+							<label for="height">height:</label>
+							<input type="text" name="height" value="" id="height">px
+						</div>
+
+						<div class="opt">Background Color Options:<br /> 
+														<div id="colorControl">
+															<ul>
+																<li id="blue"></li>
+																<li id="red"></li>
+																<li id="green"></li>
+																<li id="yellow"></li>
+																<li id="black"></li>
+																<li id="white"></li>
+															</ul>
+														</div>
+						</div>
+						<div class="opt">Notice: <br />
+														More options are coming, give me suggestions in the comment box and I will see what I can do.
+						</div>
+						<div class="opt">
+														Keyboard shortcut:<br />
+														<strong>Ctrl + Q or Alt + V or Alt + tab or Ctrl + Return</strong>
+						</div>
+					</div>
+				<div class="clear">
+				</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			
+			$("#blue").click(function(){
+				window.localStorage.setItem("style", "blue");
+			});
+			
+			$("#red").click(function(){
+				window.localStorage.setItem("style", "red");
+			});
+			
+			$("#green").click(function(){
+				window.localStorage.setItem("style", "green");
+			});
+			
+			$("#yellow").click(function(){
+				window.localStorage.setItem("style", "yellow");
+			});
+			
+			$("#black").click(function(){
+				window.localStorage.setItem("style", "black");
+			});
+			
+			$("#white").click(function(){
+				window.localStorage.setItem("style", "white");
+			});
+
+			function init() {
+				if(window.localStorage.reflection == "true")
+					$("input[name=reflection]").attr('checked', true);
+				if(window.localStorage.fadeInDistance == "true")
+					$("input[name=fadeInDistance]").attr('checked', true);
+				if(window.localStorage.closeButton == "true")
+					$("input[name=closeBt]").attr('checked', true);
+				if(window.localStorage.thumbSize == "true")
+					$("input[name=thumbSize]").attr('checked', true);
+				if(window.localStorage.setting == "true")
+					$("input[name=setting]").attr('checked', true);
+				if(window.localStorage.popupOption) {
+					var option = window.localStorage.popupOption;
+					$("select option[value='"+option+"']").attr("selected", "selected");
+				}
+				if(window.localStorage.winWidth) {
+					var width = window.localStorage.winWidth;
+					$("#width").val(width);
+				}
+				if(window.localStorage.winHeight) {
+					var height = window.localStorage.winHeight;
+					$("#height").val(height);
+				}
+				toggleSize(null);
+			}
+			
+			$("#reflection").click(function(){
+				if(this.checked) {
+					window.localStorage.setItem("reflection", true);
+				} else {
+					window.localStorage.setItem("reflection", false);
+				}
+			});
+			
+			$("#fadeInDistance").click(function(){
+				if(this.checked) {
+					window.localStorage.setItem("fadeInDistance", true);
+				} else {
+					window.localStorage.setItem("fadeInDistance", false);
+				}
+			});
+			
+			$("#closeBt").click(function(){
+				if(this.checked) {
+					window.localStorage.setItem("closeButton", true);
+				} else {
+					window.localStorage.setItem("closeButton", false);
+				}
+			});
+
+			$("#thumbSize").click(function(){
+				if(this.checked) {
+					window.localStorage.setItem("thumbSize", true);
+				} else {
+					window.localStorage.setItem("thumbSize", false);
+				}
+			});
+			
+			$("#setting").click(function(){
+				if(this.checked) {
+					window.localStorage.setItem("setting", true);
+				} else {
+					window.localStorage.setItem("setting", false);
+				}
+			});
+			
+			$("#popupOption").change(function(){
+				var option = $("select option:selected").text();
+				window.localStorage.setItem("popupOption", option);
+				toggleSize(option);
+			});
+			
+			$("#width").change(function(){
+				var width = $(this).val();
+				window.localStorage.setItem("winWidth", width);
+			});
+			
+			$("#height").change(function(){
+				var height = $(this).val();
+				window.localStorage.setItem("winHeight", height);
+			});
+			
+			function toggleSize(opt) {
+				var option = (opt !== null)? opt: $("select option:selected").text();
+				if(option === "tab") {
+					$("#width").attr("disabled", true).css("background", "#a9a9a9");
+					$("#height").attr("disabled", true).css("background", "#a9a9a9");
+				} else if(option === "window") {
+					$("#width").attr("disabled", false).css("background", "#ffffff");
+					$("#height").attr("disabled", false).css("background", "#ffffff");
+				}
+			}
+			
+			//for debugging
+			function dumpProps(obj, parent) {
+				for(var i in obj) {
+					if(parent) {
+						var msg = parent  + "." + "\n" + obj[i];
+					} else {
+						var msg = i + "\n" + obj[i];
+					}
+
+					if(!confirm(msg)) {return;}
+
+					if(typeof obj[i] == "object") {
+						if(parent) {
+							dumpProps(obj[i], parent + "." + i);
+						} else {
+							dumpProps(obj[i], i);
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
