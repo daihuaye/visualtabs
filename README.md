@@ -1,9 +1,8 @@
 Lead Developer: Daifu Ye
+
 Developer: Daihua Ye
 
-The project is written in javascript and html. I help my brother to test and solve some problems in javascript. 
-
-The project is mainly developed by Daifu Ye.
+The project is written in javascript and html. I help my brother to test and resolve issues.
 
 What we got from the project: 
 1, understand how functional programing in javascript work
