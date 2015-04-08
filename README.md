@@ -1,8 +1,6 @@
-Lead Developer: Daifu Ye
 
-Developer: Daihua Ye
-
-The project is written in javascript and html. I help my brother to test and resolve issues.
+## Intro
+The project is written in javascript and html. My brother and I work on this to make an easy navigation in virtual screen shot of each website.
 
 What we got from the project: 
 1, understand how functional programing in javascript work
@@ -13,4 +11,8 @@ What we got from the project:
 Here is the link to the google chrome extension: 
 https://chrome.google.com/extensions/detail/gmpnbibondcjmkmmdmdjahgoglpendge?hl=en
 
-license: MIT
+## Credit
+[Daifu Ye](https://github.com/daifu) && [Daihua Ye](https://github.com/daihuaye)
+
+## License
+MIT
